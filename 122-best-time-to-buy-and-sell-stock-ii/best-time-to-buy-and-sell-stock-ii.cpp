@@ -21,20 +21,20 @@ public:
 
     }
     int maxProfit(vector<int>& prices) {
-        int n = prices.size();
-        int profit = 0;
-        // int buy = 0;
+        // int n = prices.size();
+        // int profit = 0;
+        // // int buy = 0;
 
-        for(int i=1 ; i<n ; i++){
-            if(prices[i]>prices[i-1]){
-                profit += prices[i] - prices[i-1];
-            }
-        }
-        return profit;
-        // vector<vector<int>> dp(prices.size(), vector<int>(2,-1));
+        // for(int i=1 ; i<n ; i++){
+        //     if(prices[i]>prices[i-1]){
+        //         profit += prices[i] - prices[i-1];
+        //     }
+        // }
+        // return profit;
+        vector<vector<int>> dp(prices.size(), vector<int>(2,-1));
 
-        // bool buy = true;
-        // int index = 0;
-        // return solve(true , 0 , prices,dp);
+        bool buy = true;
+        int index = 0;
+        return solve(true , 0 , prices,dp);
     }
 };
