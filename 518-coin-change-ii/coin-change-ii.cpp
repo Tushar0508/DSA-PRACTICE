@@ -3,7 +3,7 @@ public:
     int solve(int i , vector<vector<int>> &dp , vector<int> &coins , int amount){
         if(amount == 0 ) return 1;
          if(i == 0){
-            if(amount%coins[i] == 0) return 1;
+            if(amount%coins[0] == 0) return 1;
             return 0;
         }
 
